@@ -36,3 +36,15 @@ The user.js file is used to create a sequelize data table containing user detail
 
 This folder is used to store all the thing that the user will be able to see, things like css, images, some js and html usualy go in here
 
+There are 3 .html files in the public folder, these are all used to set up the structure of the webpages that the user will be sent to such as the login page and sign up pages
+
+The stylesheets folder contains a style.css file which is usualy used to decorate and style a webpage so it doesnt have a basic html file look, in this case the style.css is only used to put the contents of the sign in and register forms 50 pixels away from  the top of the view window
+
+The js folder contains 3 .js files which all correspond with a html document in the public folder, these .js files are used to communicate what happens on button clicks and form submissions and things and communicate what goes in the requests that are sent to the back end.
+
+# Routes Folder
+
+The routes folder is used as a form of pointer stystem for the computer to read where it should be sending the user/data depending on the requests it recieces from the front end
+
+The html-routes.js file is used to create instruction for the computer so that when it recieves a request it knows what to do with it, an example in this instance is if the server recieves a GET request of "/members" the computer will check if the user sending the request is signed in through the use of the isAuthenticated module which was made in the config/middleware folder. the computer will then make a decision on where to send the user, if they are signed in they will see the members page, if they are not they will be redirected to the sign in page.
+This restricts the "/members" route to users who are signed in only
